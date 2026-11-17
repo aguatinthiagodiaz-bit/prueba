@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under Argentino | Nueva escena musical</title>
+
+    <style>
+        /* CONFIGURACIÓN GENERAL */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #111116;
+            color: white;
+            font-family: Arial, sans-serif;
+            line-height: 1.7;
+        }
+
+        /* ENCABEZADO */
+
+        header {
+            background: linear-gradient(135deg, #171326, #30204c);
+            padding: 35px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 45px;
+            color: #c49aff;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            color: #d5c9e8;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        /* MENÚ DE NAVEGACIÓN */
+
+        nav {
+            background-color: #201b2b;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #c49aff;
+        }
+
+        /* CONTENIDO PRINCIPAL */
+
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 30px 20px;
+        }
+
+        section {
+            margin-bottom: 55px;
+            scroll-margin-top: 80px;
+        }
+
+        h2 {
+            color: #c49aff;
+            font-size: 28px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #684b91;
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            color: #d8baff;
+            margin-bottom: 10px;
+        }
+
+        p {
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+
+        /* PORTADA */
+
+        .portada {
+            text-align: center;
+            padding: 35px 20px;
+            background: linear-gradient(135deg, #211831, #35234d);
+            border-radius: 15px;
+            margin-bottom: 45px;
+        }
+
+        .portada h2 {
+            border: none;
+            font-size: 32px;
+        }
+
+        .portada p {
+            text-align: center;
+            max-width: 750px;
+            margin: auto;
+        }
+
+        /* TARJETAS DE ARTISTAS */
+
+        .contenedor-artistas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 25px;
+        }
+
+        .tarjeta {
+            background-color: #201d29;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .tarjeta:hover {
+            transform: translateY(-7px);
+        }
+
+        .tarjeta img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 12px;
+        }
+
+        .tarjeta p {
+            text-align: center;
+            color: #d0cbd8;
+        }
+
+        /* CARACTERÍSTICAS */
+
+        .caracteristicas {
+            background-color: #201d29;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        .caracteristicas ul {
+            padding-left: 25px;
+        }
+
+        .caracteristicas li {
+            margin-bottom: 12px;
+        }
+
+        /* GALERÍA */
+
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .galeria img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: transform 0.3s;
+        }
+
+        .galeria img:hover {
+            transform: scale(1.04);
+        }
+
+        /* VIDEO */
+
+        .video-container {
+            text-align: center;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            max-width: 650px;
+            aspect-ratio: 16 / 9;
+            border: none;
+            border-radius: 12px;
+        }
+
+        /* ENLACES */
+
+        .boton {
+            display: inline-block;
+            background-color: #684b91;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 7px;
+            text-decoration: none;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+
+        .boton:hover {
+            background-color: #8b65bc;
+        }
+
+        /* PIE DE PÁGINA */
+
+        footer {
+            background-color: #201b2b;
+            text-align: center;
+            padding: 25px;
+            color: #c7bdd6;
+            margin-top: 40px;
+        }
+
+        /* ADAPTACIÓN A CELULARES */
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 30px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 8px;
+                font-size: 14px;
+            }
+
+            .portada h2 {
+                font-size: 25px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+
+    <header>
+        <h1>EL UNDER ARGENTINO</h1>
+        <p>Una nueva generación, nuevos sonidos y una nueva identidad musical.</p>
+    </header>
+
+    <!-- MENÚ -->
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#historia">Historia</a>
+        <a href="#caracteristicas">Características</a>
+        <a href="#artistas">Artistas</a>
+        <a href="#galeria">Galería</a>
+        <a href="#video">Videos</a>
+    </nav>
+
+    <main>
+
+        <!-- INTRODUCCIÓN -->
+
+        <section class="portada" id="inicio">
+
+            <h2>¿Qué es el Under Argentino?</h2>
+
+            <p>
+                El Under Argentino es un movimiento musical y cultural
+                que reúne a artistas jóvenes que buscan experimentar
+                con nuevos sonidos y construir una identidad propia
+                dentro de la música. A través de internet, las redes
+                sociales y las plataformas digitales, esta escena
+                logró llegar a públicos cada vez más grandes.
+            </p>
+
+        </section>
+
+        <!-- HISTORIA -->
+
+        <section id="historia">
+
+            <h2>El nacimiento de una nueva escena</h2>
+
+            <p>
+                La escena under argentina creció a partir de artistas
+                independientes que comenzaron a producir y compartir
+                su música sin depender necesariamente de grandes
+                discográficas. Muchos de ellos empezaron grabando
+                canciones desde sus casas o pequeños estudios,
+                utilizando herramientas digitales para crear sus
+                propios sonidos.
+            </p>
+
+            <p>
+                Con el paso del tiempo, plataformas como YouTube,
+                SoundCloud y Spotify ayudaron a que estos proyectos
+                llegaran a más personas. Las redes sociales también
+                fueron fundamentales para generar comunidades y
+                conectar artistas con oyentes de diferentes lugares.
+            </p>
+
+            <p>
+                Uno de los grandes objetivos para muchos músicos de
+                esta escena es llegar a presentarse en escenarios
+                importantes. Un ejemplo es el
+                <a class="boton"
+                href="https://share.google/DpBZmc7Xknmy0OHY3"
+                target="_blank">
+                Complejo C Art Media
+                </a>,
+                un espacio reconocido dentro de la escena musical
+                independiente de Buenos Aires.
+            </p>
+
+        </section>
+
+        <!-- CARACTERÍSTICAS -->
+
+        <section id="caracteristicas">
+
+            <h2>Características del Under</h2>
+
+            <div class="caracteristicas">
+
+                <ul>
+                    <li>
+                        <strong>Independencia:</strong>
+                        muchos artistas producen y publican su música
+                        sin depender de grandes empresas.
+                    </li>
+
+                    <li>
+                        <strong>Experimentación:</strong>
+                        se combinan géneros como el trap, rap,
+                        electrónica, rock y sonidos alternativos.
+                    </li>
+
+                    <li>
+                        <strong>Producción propia:</strong>
+                        algunos músicos crean sus propios beats,
+                        graban sus canciones y realizan sus videoclips.
+                    </li>
+
+                    <li>
+                        <strong>Internet:</strong>
+                        las plataformas digitales permiten compartir
+                        música y llegar a nuevos públicos.
+                    </li>
+
+                    <li>
+                        <strong>Identidad visual:</strong>
+                        la estética de las portadas, los videos y
+                        la vestimenta también forman parte del movimiento.
+                    </li>
+                </ul>
+
+            </div>
+
+        </section>
+
+        <!-- ARTISTAS -->
+
+        <section id="artistas">
+
+            <h2>Artistas destacados</h2>
+
+            <p>
+                Dentro de esta escena aparecen distintos artistas
+                que fueron construyendo su reconocimiento gracias
+                a sus propuestas musicales y a sus comunidades
+                de seguidores.
+            </p>
+
+            <div class="contenedor-artistas">
+
+                <div class="tarjeta">
+
+                    <img src="foto de cero.jpg"
+                    alt="Fotografía de Cero*">
+
+                    <h3>Cero*</h3>
+
+                    <p>
+                        Es uno de los nombres asociados a esta
+                        nueva generación. Entre sus canciones
+                        se encuentran "Mr. wow" y distintos
+                        proyectos discográficos.
+                    </p>
+
+                </div>
+
+                <div class="tarjeta">
+
+                    <img src="foe.jpg"
+                    alt="Portada del disco fœ">
+
+                    <h3>fœ</h3>
+
+                    <p>
+                        Uno de los proyectos musicales relacionados
+                        con Cero*, que forma parte de su recorrido
+                        artístico y su identidad sonora.
+                    </p>
+
+                </div>
+
+                <div class="tarjeta">
+
+                    <img src="after foe.jpg"
+                    alt="Portada de After Foe">
+
+                    <h3>After Foe</h3>
+
+                    <p>
+                        Otro material para conocer la evolución
+                        musical y estética del proyecto de Cero*.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- DISCOS -->
+
+        <section>
+
+            <h2>La importancia de los álbumes</h2>
+
+            <p>
+                Los discos y proyectos musicales son una parte
+                importante de la identidad de cada artista. No
+                solamente reúnen canciones, sino que también
+                representan una etapa creativa, una estética
+                y una forma particular de expresarse.
+            </p>
+
+            <p>
+                En el caso de Cero*, se pueden mencionar proyectos
+                como "Mecánico", "fœ" y su trabajo más reciente,
+                "yo pray .". Estos materiales permiten conocer
+                diferentes aspectos de su propuesta musical.
+            </p>
+
+        </section>
+
+        <!-- GALERÍA -->
+
+        <section id="galeria">
+
+            <h2>Galería de imágenes</h2>
+
+            <p>
+                Algunas imágenes relacionadas con la estética
+                y los proyectos musicales del Under Argentino.
+            </p>
+
+            <div class="galeria">
+
+                <img src="foto de cero.jpg"
+                alt="Cero*">
+
+                <img src="foe.jpg"
+                alt="Disco fœ">
+
+                <img src="after foe.jpg"
+                alt="Disco After Foe">
+
+            </div>
+
+        </section>
+
+        <!-- VIDEO -->
+
+        <section id="video">
+
+            <h2>Conocé su música</h2>
+
+            <p>
+                Una forma de conocer esta escena es escuchar
+                directamente a sus artistas y observar sus
+                producciones audiovisuales.
+            </p>
+
+            <div class="video-container">
+
+                <iframe
+                src="https://www.youtube.com/embed/XaZzIbbXAA0"
+                title="Video musical de YouTube"
+                allowfullscreen>
+                </iframe>
+
+            </div>
+
+        </section>
+
+        <!-- CONCLUSIÓN -->
+
+        <section>
+
+            <h2>Conclusión</h2>
+
+            <p>
+                El Under Argentino demuestra cómo una nueva
+                generación de artistas puede crear sus propios
+                espacios dentro de la industria musical.
+                A través de la creatividad, la experimentación
+                y las herramientas digitales, estos músicos
+                están construyendo una escena que continúa
+                creciendo y llegando a nuevos públicos.
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+
+    <footer>
+
+        <p>
+            Under Argentino | Una nueva generación musical.
+        </p>
+
+    </footer>
+
+</body>
+</html>
